@@ -1,4 +1,5 @@
 ## 目录结构
+```
 ├── build                      # 构建相关
 ├── mock                       # 项目mock 模拟数据
 ├── plop-templates             # 基本模板
@@ -31,3 +32,10 @@
 ├── vue.config.js              # vue-cli 配置
 ├── postcss.config.js          # postcss 配置
 └── package.json               # package.json
+```
+
+## git 使用
+- 拉数据 git pull
+- 推数据 git push 
+- 保存到临时区 git add . -> git commit -m "命名"
+- 其他
