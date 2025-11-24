@@ -41,18 +41,15 @@ export default {
       searchTerm: '' // 初始化搜索词
     }
   },
-  async created () {
-    try {
-      this.rooms = await fetchRooms() // 获取房间信息
-    } catch (error) {
-      console.error('获取房间信息失败:', error)
-      // 如果获取失败，显示模拟数据
-      this.rooms = [
-        { id: 1, title: '房间一', price: 200, description: '这是房间一的描述', image: require('@/assets/images/image01.png') },
-        { id: 2, title: '房间二', price: 150, description: '这是房间二的描述', image: require('@/assets/images/image01.png') },
-        { id: 3, title: '房间三', price: 300, description: '这是房间三的描述', image: require('@/assets/images/image01.png') }
-      ]
-    }
+  created () {
+    // 直接使用模拟数据，避免API调用
+    this.rooms = [
+      { id: 1, title: '豪华套房', price: 580, description: '宽敞舒适的豪华套房，配备独立卫浴和阳台', image: require('@/assets/images/image01.png') },
+      { id: 2, title: '标准双人间', price: 320, description: '温馨舒适的标准双人间，适合家庭出行', image: require('@/assets/images/image02.png') },
+      { id: 3, title: '商务单人间', price: 280, description: '简约实用的商务单人间，配备工作区域', image: require('@/assets/images/image03.png') },
+      { id: 4, title: '家庭套房', price: 450, description: '适合家庭入住的套房，配备儿童游乐区', image: require('@/assets/images/image04.png') },
+      { id: 5, title: '海景房', price: 680, description: '无敌海景房，享受海风拂面的惬意时光', image: require('@/assets/images/image05.png') }
+    ]
   },
   computed: {
     filteredRooms () {

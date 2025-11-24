@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import { fetchOrders } from '@/api/order'
+
 export default {
   name: 'OrderMange',
   data () {

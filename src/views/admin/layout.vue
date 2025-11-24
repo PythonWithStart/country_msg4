@@ -32,9 +32,16 @@ export default {
     return {
       isCollapsed: false,
       menuItems: [
-        { name: '项目一', icon: 'icon-project1', route: 'dashboard' },
-        { name: '项目二', icon: 'icon-project2', route: 'system-log' },
-        { name: '项目三', icon: 'icon-project3' }
+        { name: '数据统计', icon: 'el-icon-s-data', route: 'Dashboard' },
+        { name: '用户管理', icon: 'el-icon-user', route: 'UserMange' },
+        { name: '产品管理', icon: 'el-icon-goods', route: 'ProductMange' },
+        { name: '订单管理', icon: 'el-icon-tickets', route: 'OrderMange' },
+        { name: '房间管理', icon: 'el-icon-house', route: 'RoomMange' },
+        { name: '服务管理', icon: 'el-icon-service', route: 'ServiceMange' },
+        { name: '角色管理', icon: 'el-icon-s-custom', route: 'RoleMange' },
+        { name: '权限管理', icon: 'el-icon-lock', route: 'PermissionMange' },
+        { name: '系统日志', icon: 'el-icon-document', route: 'SystemLog' },
+        { name: '系统设置', icon: 'el-icon-setting', route: 'SettingMange' }
       ]
     }
   },

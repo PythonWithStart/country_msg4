@@ -33,15 +33,15 @@ export default {
 }
 </script>
 
-<style>
-.image-slider img {
-  width: 10%;
-  height: auto;
-  display: block; /* 移除图片下方的空隙 */
-}
+<style scoped>
 .el-carousel__item {
-  width: 80%;
-  height: auto;
-  margin: 0 20%;
+  width: 100%;
+  height: 400px;
+}
+.el-carousel__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 </style>

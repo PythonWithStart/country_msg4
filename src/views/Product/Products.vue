@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { fetchProducts } from '@/api/product' // 更新导入路径
+// import { fetchProducts } from '@/api/product' // 更新导入路径
 
 export default {
   name: 'Products',
@@ -48,41 +48,21 @@ export default {
       )
     }
   },
-  async created () {
-    try {
-      this.products = await fetchProducts() // 使用封装的 API 方法获取产品信息
-      // 补充数据到10条
-      this.products.push(
-        { id: 1, name: '产品一', price: 100, shoeName: '商店一' },
-        { id: 2, name: '产品二', price: 200, shoeName: '商店一' },
-        { id: 3, name: '产品三', price: 300, shoeName: '商店一' },
-        { id: 4, name: '产品四', price: 400, shoeName: '商店二' },
-        { id: 5, name: '产品五', price: 500, shoeName: '商店二' },
-        { id: 6, name: '产品六', price: 600, shoeName: '商店二' },
-        { id: 7, name: '产品七', price: 700, shoeName: '商店二' },
-        { id: 8, name: '产品八', price: 800, shoeName: '商店二' },
-        { id: 9, name: '产品九', price: 900, shoeName: '商店二' },
-        { id: 10, name: '产品十', price: 1000, shoeName: '商店二' }
-      )
-      this.showProducts = this.products
-    } catch (error) {
-      console.error('获取产品信息失败:', error)
-      this.$message.error('获取产品信息失败，请检查网络或后端服务。')
-      // 如果获取失败，显示模拟数据
-      this.products = [
-        { id: 1, name: '产品一', price: 100, shoeName: '商店一' },
-        { id: 2, name: '产品二', price: 200, shoeName: '商店一' },
-        { id: 3, name: '产品三', price: 300, shoeName: '商店一' },
-        { id: 4, name: '产品四', price: 400, shoeName: '商店二' },
-        { id: 5, name: '产品五', price: 500, shoeName: '商店二' },
-        { id: 6, name: '产品六', price: 600, shoeName: '商店二' },
-        { id: 7, name: '产品七', price: 700, shoeName: '商店二' },
-        { id: 8, name: '产品八', price: 800, shoeName: '商店二' },
-        { id: 9, name: '产品九', price: 900, shoeName: '商店二' },
-        { id: 10, name: '产品十', price: 1000, shoeName: '商店二' }
-      ]
-      this.showProducts = this.products
-    }
+  created () {
+    // 直接使用模拟数据，避免API调用
+    this.products = [
+      { id: 1, name: '智能手机', price: 2999, shoeName: '商店一' },
+      { id: 2, name: '笔记本电脑', price: 5999, shoeName: '商店一' },
+      { id: 3, name: '平板电脑', price: 1999, shoeName: '商店一' },
+      { id: 4, name: '智能手表', price: 899, shoeName: '商店二' },
+      { id: 5, name: '蓝牙耳机', price: 399, shoeName: '商店二' },
+      { id: 6, name: '数码相机', price: 4599, shoeName: '商店二' },
+      { id: 7, name: '游戏主机', price: 2499, shoeName: '商店二' },
+      { id: 8, name: '显示器', price: 1299, shoeName: '商店二' },
+      { id: 9, name: '机械键盘', price: 599, shoeName: '商店二' },
+      { id: 10, name: '无线鼠标', price: 199, shoeName: '商店二' }
+    ]
+    this.showProducts = this.products
   },
   methods: {
     async changeStore (store) {

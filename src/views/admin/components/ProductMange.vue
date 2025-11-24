@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import { fetchProducts } from '@/api/product'
+
 export default {
   name: 'ProductMange',
   data () {

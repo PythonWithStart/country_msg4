@@ -10,23 +10,25 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "element-ui": "^2.15.1",
+    "axios": "^1.13.2",
+    "element-ui": "^2.15.14",
+    "js-cookie": "^3.0.5",
     "mockjs": "^1.1.0",
-    "vue": "^2.6.12",
-    "vue-router": "^3.4.9",
+    "vue": "^2.7.16",
+    "vue-router": "^3.6.5",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.0",
-    "@vue/cli-plugin-eslint": "^4.5.0",
-    "@vue/cli-service": "^4.5.0",
+    "@vue/cli-plugin-babel": "^4.5.19",
+    "@vue/cli-plugin-eslint": "^4.5.19",
+    "@vue/cli-service": "^4.5.19",
     "@vue/eslint-config-standard": "^5.1.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^7.8.0",
+    "eslint-plugin-vue": "^7.20.0",
     "file-loader": "^6.2.0",
-    "url-loader": "^4.1.1"
+    "url-loader": "^4.1.1",
+    "vue-template-compiler": "^2.7.16"
   },
   "keywords": [
     "tourism",
@@ -34,5 +36,6 @@
     "management"
   ],
   "author": "Your Name",
-  "license": "ISC"
+  "license": "ISC",
+  "packageManager": "pnpm@10.8.1+sha512.c50088ba998c67b8ca8c99df8a5e02fd2ae2e2b29aaf238feaa9e124248d3f48f9fb6db2424949ff901cffbb5e0f0cc1ad6aedb602cd29450751d11c35023677"
 }
